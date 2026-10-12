@@ -1,21 +1,15 @@
 
 package reverse;
-import java.util.Scanner;
-
 public class Reverse {
 
-   
-    public static void main(String[] args) {
-       Scanner sc= new Scanner (System.in);
-        System.out.println("enter the string");
-        String s=sc.nextLine();
-        int l=s.length();
-        String s1=" ";
-        for(int i=l-1;i>=0;i--){
-            char c=s.charAt(i);
-            s1=s1+c;
-        }
-        System.out.println("reversed String is"+s1);
+ public static void main(String[] args) { 
+     String str="computer";
+     String rev=" ";
+     int x=str.length()-1;
+     for(int i=x;i>=0;i--){
+         rev=rev+str.charAt(i);
+     }
+     System.out.println("reverse String: "+rev);
     }
     
 }
