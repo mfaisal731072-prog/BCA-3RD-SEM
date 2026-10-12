@@ -1,3 +1,0 @@
-objectorientationclass.Cpp
-objectorientationclass.JavaLanguage
-objectorientationclass.Objectorientationclass
