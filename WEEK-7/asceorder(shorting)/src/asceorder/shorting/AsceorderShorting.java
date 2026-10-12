@@ -1,31 +1,27 @@
 
 package asceorder.shorting;
 
-import java.util.Scanner;
 public class AsceorderShorting {
 
-    
-    public static void main(String[] args) {
-      Scanner sc=new Scanner(System.in);
-      int a[]=new int[5];
-        System.out.println("enter 5 numbers:");
-        for(int i=0;i<5;i++){
-            a[i]=sc.nextInt();
-        }
-        for(int i=0;i<5;i++){
-            for(int j=0;j<4-i;j++){
-                if(a[j]>a[j+i]){
-                    int t= a[j];
-                    a[j]=a[j+1];
-                    a[j+1]= t;
-                
-            }
-            }
-        }
-        System.out.println("array is ascending order is :");
-        for(int i=0;i<5;i++){
-            System.out.println(a[i]);
-        }
+    public static void sort(int arr[]){
+         int x=arr.length-1;
+          for(int i=0;i<x;i++){
+              for(int j=0;j<x-i;j++){
+                  if(arr[j]>arr[j+1]){
+                  int t=arr[j];
+                  arr[j]=arr[j+1];
+                  arr[j+1]=t;
+                }
+              }
+           }
+      }
+ public static void main(String[] args) { 
+      int arr[]={10,3,8,6,5,2};
+      sort(arr);
+      for(int e:arr)
+      {
+          System.out.println(e+" ");
+      }
     }
     
 }
