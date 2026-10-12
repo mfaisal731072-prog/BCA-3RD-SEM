@@ -1,38 +1,33 @@
 package binarysearch;
-import java.util.Scanner;
+
 public class BINARYSEARCH {
 
-    
-    public static void main(String[] args) {
-      Scanner sc=new Scanner(System.in);
-      int []a=new int[5];
-        System.out.println("enter the 5 number:");
-        for(int i=0;i<5;i++){
-            a[i]=sc.nextInt();
-        }
-        System.out.println("enter the numbers");
-        int s=sc.nextInt();
-        boolean is = false;
-        int l=0;
-        int u=a.length-l;
-        int m;
-        while(l<=u){
-        m=(l+u)/2;
-        if(a[m]==s){
-            System.out.println("found");
-            is= true;
-            break;
-        }
-        else if(a[m]>s){
-            u=m-l;
-        }
-        else{
-            l=m+1;
-        }
-    }
-        if(is==false){
-            System.out.println("not found");
-        }
+   public static int binarysearch(int arr[], int t){
+          int low =0;
+          int high=0;
+          while(low<=high){
+              int mid=(low+high)/2;
+              if(arr[mid]==t)
+                  return mid;
+              else if(arr[mid]<t)
+                  low=mid+1;
+              else
+                  high=mid-1;
+              
+          }
+          return-1;
+      }
+ public static void main(String[] args) { 
+      int arr[]={10,32,42,52,85};
+      int t=52;
+      System.out.println("search number:"+t);
+      int result= binarysearch(arr,t);
+      if(result==-1)
+          System.out.println("found");
+      else
+          System.out.println("not found"+result);
+              
+         
     }
     
 }
