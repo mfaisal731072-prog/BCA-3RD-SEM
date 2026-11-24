@@ -1,8 +1,5 @@
 
 package multipleinheretanc;
-
-
-       
 interface Bike {
 
     void offer();
