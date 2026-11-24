@@ -1,0 +1,4 @@
+multipleinheretanc.Bike
+multipleinheretanc.Scooty
+multipleinheretanc.BuySomething
+multipleinheretanc.MULTIPLEINHERETANC
